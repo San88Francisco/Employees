@@ -1,0 +1,23 @@
+// @import './commponents/loaut/style.scss';
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html,
+body,
+body>div {
+   height: 100%;
+}
+
+body {
+   font-family: "Poppins";
+   background-color: #0d1117;
+   color: aliceblue;
+}
+
+a {
+   text-decoration: none;
+}

@@ -28,6 +28,9 @@ module.exports = app;
 
 //? Нова міграція
 //* перезапис prisma studio
-// npx prisma migrate dev change-field 
+// npx prisma migrate dev change-field
 //* далі там в середині пишемо що змінилось (address)
 // change address name
+
+//* створити реакт проект
+// npx create - react - app client--template redux - typescript
