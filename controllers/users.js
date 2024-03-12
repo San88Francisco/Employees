@@ -32,7 +32,7 @@ const login = async (req, res) => {
             id: user.id,
             email: user.email,
             name: user.name,
-            toker: jwt.sign({ id: user.id }, secret, { expiresIn: '30d' })
+            token: jwt.sign({ id: user.id }, secret, { expiresIn: '30d' })
          })
       } else {
          return res.status(400).json({ message: 'Неправильно введений пароль або логін' })
