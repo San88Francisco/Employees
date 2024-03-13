@@ -8,7 +8,7 @@ listnerMiddleware.startListening({
   effect: async (action, listnerApi) => {
     listnerApi.cancelActiveListeners()
     if (action.payload.token) {
+      localStorage.setItem('token', action.payload.token)
     }
-    localStorage.setItem('token', action.payload.token)
   },
 })

@@ -9,37 +9,41 @@ import {Paths} from './paths'
 import './index.scss'
 import Login from './pags/login/login'
 import Register from './pags/register/register'
+import Auth from './features/auth/auth'
+// import Auth from './features/auth/auth'
 
 const router = createBrowserRouter([
-   {
-      path: Paths.home,
-      element: <h1>home</h1>,
-   },
-   {
-      path: Paths.login,
-      element: <Login />,
-   },
-   {
-      path: Paths.register,
-      element: <Register />,
-   },
+  {
+    path: Paths.home,
+    element: <h1>home</h1>,
+  },
+  {
+    path: Paths.login,
+    element: <Login />,
+  },
+  {
+    path: Paths.register,
+    element: <Register />,
+  },
 ])
 
 const container = document.getElementById('root')!
 const root = createRoot(container)
 
 root.render(
-   <React.StrictMode>
-      <Provider store={store}>
-         <ConfigProvider
-            theme={{
-               algorithm: theme.darkAlgorithm,
-            }}
-         >
-            <RouterProvider router={router}></RouterProvider>
-         </ConfigProvider>
-      </Provider>
-   </React.StrictMode>
+  <React.StrictMode>
+    <Provider store={store}>
+      <ConfigProvider
+        theme={{
+          algorithm: theme.darkAlgorithm,
+        }}
+      >
+        <Auth>
+          <RouterProvider router={router}></RouterProvider>
+        </Auth>
+      </ConfigProvider>
+    </Provider>
+  </React.StrictMode>
 )
 
 reportWebVitals()
