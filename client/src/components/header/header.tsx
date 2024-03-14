@@ -17,7 +17,7 @@ export const Header = () => {
     navigate('/login')
   }
   return (
-    <Layout.Header className={styles.header}>
+    <Layout.Header className={styles.header} style={{background: '#191919'}}>
       <Space>
         <Typography className={styles.teamIcon}></Typography>
         <Link to={Paths.home}>

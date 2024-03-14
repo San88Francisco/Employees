@@ -64,7 +64,7 @@ const Employee = () => {
           span={3}
         >{`${data.age}`}</Descriptions.Item>
         <Descriptions.Item
-          label='Вік'
+          label='Адреса'
           span={3}
         >{`${data.address}`}</Descriptions.Item>
       </Descriptions>

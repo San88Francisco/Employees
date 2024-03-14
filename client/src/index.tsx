@@ -14,6 +14,7 @@ import Employees from './pags/employees/employees'
 import AddEmployee from './pags/add-employee/add-employee'
 import Status from './pags/status/status'
 import Employee from './pags/employee/employee'
+import EditEmployee from './pags/edit-employee/edit-employee'
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: `${Paths.employee}/:id`,
     element: <Employee />,
+  },
+  {
+    path: `${Paths.employeeEdit}/:id`,
+    element: <EditEmployee />,
   },
 ])
 
