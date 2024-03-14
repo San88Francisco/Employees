@@ -10,12 +10,14 @@ import './index.scss'
 import Login from './pags/login/login'
 import Register from './pags/register/register'
 import Auth from './features/auth/auth'
-// import Auth from './features/auth/auth'
+import Employees from './pags/employees/employees'
+import AddEmployee from './pags/add-employee/add-employee'
+import Status from './pags/status/status'
 
 const router = createBrowserRouter([
   {
     path: Paths.home,
-    element: <h1>home</h1>,
+    element: <Employees />,
   },
   {
     path: Paths.login,
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
   {
     path: Paths.register,
     element: <Register />,
+  },
+  {
+    path: Paths.employeeAdd,
+    element: <AddEmployee />,
+  },
+  {
+    path: `${Paths.status}/:status`,
+    element: <Status />,
   },
 ])
 

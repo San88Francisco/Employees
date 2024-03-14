@@ -2,18 +2,19 @@ const express = require('express')
 const router = express.Router()
 const { auth } = require('../middleware/auth')
 // const { log } = require('debug/src/browser')
-const { all, add, remove, employee, edit } = require('../controllers/employes')
+const { all, add, remove, employee, edit } = require('../controllers/employees')
 
-// /api/employes
+// /api/employees
 router.get('/', auth, all)
-// /api/employes/id
+// /api/employees/id
 router.get('/:id', auth, employee)
-// /api/employes/add
+// /api/employees/add
 router.post('/add', auth, add)
-// /api/employes/remove/:id
+// /api/employees/remove/:id
 router.post('/remove/:id', auth, remove);
 
-// /api/employes/edit/:id
+// /api/employees/edit/:id
 router.put('/edit/:id', auth, edit)
 
 module.exports = router
+

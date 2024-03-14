@@ -1,14 +1,14 @@
 const { prisma } = require('../prisma/prisma-client')
 /**
- * @route GET /api/employes
+ * @route GET /api/employees
  * @desc Отримання всіх співробітників
  * @access Private
  */
 const all = async (req, res) => {
    try {
-      const employes = await prisma.employee.findMany()
+      const employees = await prisma.employee.findMany()
 
-      res.status(200).json(employes)
+      res.status(200).json(employees)
    } catch {
       res.status(500).json({ message: 'Не вдалось отримати співробітника' })
    }
@@ -16,7 +16,7 @@ const all = async (req, res) => {
 
 
 /**
- * @route POST /api/employes/add
+ * @route POST /api/employees/add
  * @desc Додавання співробітників
  * @access Private
  */
@@ -46,7 +46,7 @@ const add = async (req, res) => {
 
 
 /**
- * @route POST /api/employes/remove/id
+ * @route POST /api/employees/remove/id
  * @desc Видалення співробітника
  * @access Private
  */
@@ -70,7 +70,7 @@ const remove = async (req, res) => {
 
 
 /**
- * @route PUT /api/employes/edit/id
+ * @route PUT /api/employees/edit/id
  * @desc Редагування співробітника
  * @access Private
  */
@@ -94,7 +94,7 @@ const edit = async (req, res) => {
 
 
 /**
- * @route PUT /api/employes/:id
+ * @route PUT /api/employees/:id
  * @desc Отримання співробітника
  * @access Private
  */

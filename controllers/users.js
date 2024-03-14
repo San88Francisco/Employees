@@ -97,39 +97,6 @@ const register = async (req, res) => {
 
 
 /**
- * @route POST /api/employes/add
- * @desc Додавання співробітників
- * @access Private
- */
-const add = async (req, res) => {
-   try {
-      const { body } = req
-      const data = body
-
-      if (!data.firstName || !data.firstLast || !data.adress || data.age) {
-         return res.status(400).json({ message: 'Всі поля обов`язкові' })
-      }
-
-      const employee = await prisma.user.update({
-         where: {
-            id: req.user.id
-         },
-         data: {
-            createdEmployee: {
-               create: data
-            }
-         }
-      })
-
-      return res.status(201).json(employee)
-   } catch (error) {
-      return res.status(500).json({ message: 'Щось пішло не так' })
-
-   }
-}
-
-
-/**
  * 
  * @route GET /api/user/current
  * @desc Текущий користувач
