@@ -17,6 +17,7 @@ import Employee from './pags/employee/employee'
 import EditEmployee from './pags/edit-employee/edit-employee'
 
 //router
+//router
 const router = createBrowserRouter([
    {
       path: Paths.home,
